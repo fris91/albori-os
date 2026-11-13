@@ -1,0 +1,20 @@
+singleton Theme 1.0 Theme.qml
+singleton Style 1.0 Style.qml
+TextLabel 1.0 TextLabel.qml
+Glyph 1.0 Glyph.qml
+IconButton 1.0 IconButton.qml
+ActionButton 1.0 ActionButton.qml
+AppButton 1.0 AppButton.qml
+SearchField 1.0 SearchField.qml
+Toggle 1.0 Toggle.qml
+ListRow 1.0 ListRow.qml
+Section 1.0 Section.qml
+Scrollable 1.0 Scrollable.qml
+PageHeader 1.0 PageHeader.qml
+ValueSlider 1.0 ValueSlider.qml
+NotificationCard 1.0 NotificationCard.qml
+QuickTile 1.0 QuickTile.qml
+Surface 1.0 Surface.qml
+Wallpaper 1.0 Wallpaper.qml
+SegmentedControl 1.0 SegmentedControl.qml
+Chip 1.0 Chip.qml

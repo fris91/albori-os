@@ -1,0 +1,6 @@
+FROM clickable/amd64-ut24.04-1.x-amd64@sha256:bf176d888b9c7f9ae9c01128e0cc296c78769099de29ff42e30aaca63b21b5d7
+ARG UBUNTU_MIRROR=http://archive.ubuntu.com/ubuntu/
+RUN sed -i "s|http://archive.ubuntu.com/ubuntu/|${UBUNTU_MIRROR}|g" /etc/apt/sources.list.d/ubuntu.sources
+RUN printf 'Acquire::Retries "1";\nAcquire::http::Timeout "15";\nAcquire::https::Timeout "15";\n' > /etc/apt/apt.conf.d/99albori-network
+ADD lomiri-schemas.tar /opt/albori-schemas/
+RUN cmake -S /opt/albori-schemas -B /opt/albori-schemas-build -DCMAKE_INSTALL_PREFIX=/usr && cmake --build /opt/albori-schemas-build && cmake --install /opt/albori-schemas-build

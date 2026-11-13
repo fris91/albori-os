@@ -1,0 +1,11 @@
+{
+  "format": 1,
+  "date": "2026-11-11",
+  "branch": "albori/ui-foundation",
+  "repositories": [
+    {"name": "lomiri", "url": "https://gitlab.com/ubports/development/core/lomiri.git", "ref": "main", "commit": "e908b8781a4291f8d9f7ab0c70f460d0e21f27a6"},
+    {"name": "lomiri-system-settings", "url": "https://gitlab.com/ubports/development/core/lomiri-system-settings.git", "ref": "main", "commit": "6305996a1ccf2df7f4eb9c6323bb70888a042f4e"},
+    {"name": "lomiri-ui-toolkit", "url": "https://gitlab.com/ubports/development/core/lomiri-ui-toolkit.git", "ref": "main", "commit": "c06383e296ea8b47e2301e4d986b0c4549e9c040"},
+    {"name": "lomiri-schemas", "url": "https://gitlab.com/ubports/development/core/lomiri-schemas.git", "ref": "main", "commit": "8faee58c2fdd8b531dcae67430475912d4cb9243"}
+  ]
+}

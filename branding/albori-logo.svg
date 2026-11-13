@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="368" height="264" viewBox="-24 -8 368 264" role="img" aria-labelledby="title">
+  <title id="title">Albori OS: sole nascente con raggi rettangolari</title>
+  <rect x="-24" y="-8" width="368" height="264" rx="32" fill="#101114"/>
+  <g fill="#FFD43B">
+    <path d="M40 190a120 120 0 0 1 240 0Z"/>
+    <rect x="148" y="10" width="24" height="40"/>
+    <rect x="148" y="10" width="24" height="40" transform="rotate(-45 160 190)"/>
+    <rect x="148" y="10" width="24" height="40" transform="rotate(45 160 190)"/>
+    <rect x="148" y="10" width="24" height="40" transform="rotate(-90 160 190)"/>
+    <rect x="148" y="10" width="24" height="40" transform="rotate(90 160 190)"/>
+  </g>
+</svg>

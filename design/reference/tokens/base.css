@@ -1,0 +1,6 @@
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--bg);color:var(--fg-1);font:var(--text-body);font-feature-settings:"tnum" 1,"cv11" 1}
+[data-theme]{color:var(--fg-1)}
+a{color:var(--accent-text);text-decoration:none}
+a:hover{text-decoration:underline}
+*,*::before,*::after{box-sizing:border-box}

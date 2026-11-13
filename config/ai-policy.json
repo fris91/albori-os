@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "local": {"enabled": false, "model": null, "downloadAutomatically": false},
+  "remote": {"enabled": false, "endpoint": null, "credentialReference": null, "allowedHosts": [], "sendContextAutomatically": false},
+  "mcp": {"enabled": false, "servers": [], "toolsRequireConfirmation": true},
+  "telemetry": false,
+  "retainPrompts": false
+}

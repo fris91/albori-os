@@ -1,0 +1,19 @@
+:root{
+/* Grid unit inherited from Lomiri: 1gu = 8px. Codebase: spacing 2gu, touch target 7gu, corner 3gu. */
+--gu:8px;/* @kind other */
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;
+--screen-margin:16px;
+--touch-min:48px;
+--touch:56px;
+/* Radii — one concentric logic: container 3gu, nested = container − padding, controls are pills */
+--radius-xs:6px;
+--radius-sm:12px;
+--radius-md:16px;
+--radius-lg:24px;
+--radius-xl:32px;
+--radius-device:48px;
+--radius-pill:999px;
+--radius-icon:28%;
+--border-hairline:1px;/* @kind other */
+--blur-glass:24px;/* @kind other */
+}

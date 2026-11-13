@@ -1,0 +1,22 @@
+<!-- @dsCard group="Albori OS" viewport="1400x900" name="Dieci schermate" subtitle="All screens front-on, plus light/dark comparison of Home and Settings" -->
+<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Albori OS — Schermate</title><link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="kit.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--obsidian-950);padding:48px}h2{font:var(--text-display);margin:0 0 8px}p.lead{font:var(--text-body);color:var(--fg-2);max-width:68ch;margin:0 0 40px;text-wrap:pretty}.grid{display:flex;flex-wrap:wrap;gap:48px 36px;margin-bottom:80px}.cell{display:flex;flex-direction:column;gap:14px}.cell span{font:var(--text-label);color:var(--fg-2)}.cell b{font:var(--text-mono);color:var(--fg-3);margin-right:8px;font-weight:400}.z{width:257px;height:557px}.z>div{transform:scale(.66);transform-origin:0 0}</style></head><body>
+<div id="root"></div><script type="text/babel" src="os-shell.jsx"></script><script type="text/babel" src="screens-a.jsx"></script><script type="text/babel" src="screens-b.jsx"></script><script type="text/babel" src="screens-c.jsx"></script>
+<script type="text/babel">
+const { Phone } = window.AlboriKit;
+const ALL=[['Schermata di blocco',{screen:'lock'}],['Home',{screen:'home'}],['App e ricerca universale',{screen:'drawer',q:'gi'}],['Centro di controllo',{screen:'control',torch:true,saver:true}],['Impostazioni',{screen:'settings'}],['Privacy e autorizzazioni',{screen:'privacy',hist:['settings']}],['Personalizzazione',{screen:'personal',hist:['settings']}],['Multitasking',{screen:'multitask'}],['Store · catalogo',{screen:'store'}],['Store · pagina app',{screen:'store',storeApp:'rondine'}],['Aggiornamenti',{screen:'updates',upd:'paused',updPct:64,hist:['settings']}]];
+const CMP=[['Home · scuro',{screen:'home'}],['Home · chiaro',{screen:'home',themeMode:'Chiaro'}],['Impostazioni · scuro',{screen:'settings'}],['Impostazioni · chiaro',{screen:'settings',themeMode:'Chiaro'}]];
+const Grid=({items})=>(<div className="grid">{items.map(([l,init],i)=><div className="cell" key={l}><span><b>{String(i+1).padStart(2,'0')}</b>{l}</span><div className="z"><div><Phone initial={init}/></div></div></div>)}</div>);
+const App=()=>(<React.Fragment>
+  <h2>Albori OS</h2><p className="lead">Ossidiana, grafite e porcellana; un solo accento, la luce d’alba. Liste piatte e filetti al posto delle schede, vetro solo sopra lo sfondo, orologio in Bodoni. Ogni telefono qui sotto è interattivo.</p>
+  <Grid items={ALL}/>
+  <h2>Chiaro e scuro</h2><p className="lead">Stessi componenti e stessi token; cambiano solo le superfici e il cielo dello sfondo.</p>
+  <Grid items={CMP}/>
+</React.Fragment>);
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

@@ -1,0 +1,2 @@
+/* Substitution: the codebase specifies "system sans-serif". These Google Fonts are the proposed brand faces — replace with licensed binaries + @font-face when available. */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap");

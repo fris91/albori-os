@@ -1,0 +1,9 @@
+ARG ALBORI_BASE_IMAGE
+FROM ${ALBORI_BASE_IMAGE}
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    intltool libaccountsservice-dev libapt-pkg-dev libclick-dev \
+    libpolkit-agent-1-dev libtrust-store-dev libupower-glib-dev \
+    qml-module-qtcontacts qml-module-qtsysteminfo qml-module-ofono \
+    qml-module-lomiri-settings-fingerprint qml-module-lomiri-settings-vpn \
+    qml-module-lomiri-connectivity qml-module-lomiri-content \
+    && apt-get clean

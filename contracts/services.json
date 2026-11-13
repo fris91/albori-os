@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "status": "design-only-no-daemons-implemented",
+  "services": {
+    "hardware": {"boundary": "kernel / Halium / device-specific vendor HAL", "requires": ["selected-device", "recovery-plan", "kernel-license-audit", "apparmor"]},
+    "packages": {"boundary": "signed Debian packages and Click applications", "requires": ["dependency-review", "rollback", "no-unattended-root-install"]},
+    "desktop": {"boundary": "session D-Bus broker with authenticated paired peer", "capabilities": ["clipboard", "notifications", "files"], "default": "disabled", "requires": ["per-capability-consent", "revocation", "encrypted-transport"]},
+    "ai": {"boundary": "unprivileged local inference service; separate outbound gateway", "default": "offline", "requires": ["model-license", "memory-budget", "explicit-model-download", "per-request-context-preview"]},
+    "gateway": {"boundary": "opt-in MCP / remote LLM adapters", "default": "disabled", "requires": ["endpoint-allowlist", "secret-store", "tls-validation", "tool-confirmation", "timeout", "cancel", "redacted-audit"]}
+  }
+}

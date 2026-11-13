@@ -1,0 +1,37 @@
+FROM clickable/amd64-ut24.04-2.x-arm64
+
+ARG TOOLKIT_VERSION=1.3.5904+0~20260408081331.308+ubports24.04.2~1.gbpedfc99
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends --allow-downgrades \
+        liblomirigestures5-dev:arm64=${TOOLKIT_VERSION} \
+        liblomirigestures5-private-dev:arm64=${TOOLKIT_VERSION} \
+        liblomirigestures5t64:arm64=${TOOLKIT_VERSION} \
+        liblomirimetrics5t64:arm64=${TOOLKIT_VERSION} \
+        liblomiritoolkit5t64:arm64=${TOOLKIT_VERSION} \
+        lomiri-ui-toolkit-common=${TOOLKIT_VERSION} \
+        lomiri-ui-toolkit-theme:arm64=${TOOLKIT_VERSION} \
+        qml-module-lomiri-components:arm64=${TOOLKIT_VERSION} \
+        qml-module-lomiri-components-labs:arm64=${TOOLKIT_VERSION} \
+        qml-module-lomiri-layouts:arm64=${TOOLKIT_VERSION} \
+        qml-module-lomiri-performancemetrics:arm64=${TOOLKIT_VERSION} \
+        qml-module-lomiri-test:arm64=${TOOLKIT_VERSION} \
+    && apt-mark hold \
+        liblomirigestures5-dev:arm64 \
+        liblomirigestures5-private-dev:arm64 \
+        liblomirigestures5t64:arm64 \
+        liblomirimetrics5t64:arm64 \
+        liblomiritoolkit5t64:arm64 \
+        lomiri-ui-toolkit-common \
+        lomiri-ui-toolkit-theme:arm64 \
+        qml-module-lomiri-components:arm64 \
+        qml-module-lomiri-components-labs:arm64 \
+        qml-module-lomiri-layouts:arm64 \
+        qml-module-lomiri-performancemetrics:arm64 \
+        qml-module-lomiri-test:arm64 \
+    && apt-get clean
+ADD lomiri-schemas.tar /opt/albori-schemas/
+RUN cmake -S /opt/albori-schemas -B /opt/albori-schemas-build \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    && cmake --build /opt/albori-schemas-build \
+    && cmake --install /opt/albori-schemas-build
+
